@@ -1,0 +1,23 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="SU23B2_SOF3011_SD18105:war exploded">
+    <output-path>$PROJECT_DIR$/target/SU23B2_SOF3011_SD18105-1.0-SNAPSHOT</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>SU23B2_SOF3011_SD18105</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="SU23B2_SOF3011_SD18105" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/target/SU23B2_SOF3011_SD18105-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="SU23B2_SOF3011_SD18105/web/Web" />
+    </root>
+  </artifact>
+</component>
