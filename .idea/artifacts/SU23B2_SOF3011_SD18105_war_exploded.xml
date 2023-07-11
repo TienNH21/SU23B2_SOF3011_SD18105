@@ -13,6 +13,11 @@
         <element id="directory" name="classes">
           <element id="module-output" name="SU23B2_SOF3011_SD18105" />
         </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:3.0.0" />
+          <element id="library" level="project" name="Maven: jakarta.el:jakarta.el-api:5.0.0" />
+          <element id="library" level="project" name="Maven: org.glassfish.web:jakarta.servlet.jsp.jstl:3.0.1" />
+        </element>
       </element>
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/target/SU23B2_SOF3011_SD18105-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />

@@ -38,7 +38,17 @@ public class CuaHangServlet extends HttpServlet {
             // delete
         } else {
             // index.jsp
+            this.index(request, response);
         }
+    }
+
+    public void index(
+        HttpServletRequest request,
+        HttpServletResponse response
+    ) throws IOException, ServletException {
+        request.setAttribute("list", this.list);
+        request.getRequestDispatcher("/views/cua_hang/index.jsp")
+            .forward(request, response);
     }
 
     public void create(
@@ -55,7 +65,7 @@ public class CuaHangServlet extends HttpServlet {
     ) throws IOException, ServletException {
         String uri = request.getRequestURI();
         if (uri.contains("store")) {
-            this.create(request, response);
+            this.store(request, response);
         } else if (uri.contains("update")) {
             // edit.jsp
         }
