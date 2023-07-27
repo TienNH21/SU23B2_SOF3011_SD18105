@@ -30,7 +30,7 @@ public class CuaHang {
     public CuaHang() {
     }
 
-    public CuaHang(int id, String ma, String ten, String diaChi, String thanhPho, String quocGia) {
+    public CuaHang(UUID id, String ma, String ten, String diaChi, String thanhPho, String quocGia) {
         this.id = id;
         this.ma = ma;
         this.ten = ten;
@@ -39,11 +39,11 @@ public class CuaHang {
         this.quocGia = quocGia;
     }
 
-    public int getId() {
+    public UUID getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(UUID id) {
         this.id = id;
     }
 
