@@ -28,10 +28,10 @@
                     <td>${ ch.thanhPho }</td>
                     <td>${ ch.quocGia }</td>
                     <td>
-                        <a href="/SU23B2_SOF3011_SD18105_war_exploded/cua-hang/edit?id=${ ch.id }">Cập nhật</a>
+                        <a href="/SU23B2_SOF3011_SD18105_war_exploded/cua-hang/edit?ma=${ ch.ma }">Cập nhật</a>
                     </td>
                     <td>
-                        <a href="/SU23B2_SOF3011_SD18105_war_exploded/cua-hang/delete?id=${ ch.id }">Xóa</a>
+                        <a href="/SU23B2_SOF3011_SD18105_war_exploded/cua-hang/delete?ma=${ ch.ma }">Xóa</a>
                     </td>
                 </tr>
             </c:forEach>

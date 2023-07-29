@@ -48,7 +48,9 @@ public class CuaHangServlet extends HttpServlet {
         HttpServletRequest request,
         HttpServletResponse response
     ) throws IOException, ServletException {
-
+        String ma = request.getParameter("ma");
+        CuaHang ch = this.chRepo.findByMa(ma);
+        request.setAttribute("data", ch);
         request.getRequestDispatcher("/views/cua_hang/edit.jsp")
             .forward(request, response);
     }
@@ -57,7 +59,9 @@ public class CuaHangServlet extends HttpServlet {
         HttpServletRequest request,
         HttpServletResponse response
     ) throws IOException, ServletException {
-
+        String ma = request.getParameter("ma");
+        CuaHang ch = this.chRepo.findByMa(ma);
+        this.chRepo.delete(ch);
         response.sendRedirect("/SU23B2_SOF3011_SD18105_war_exploded/cua-hang/index");
     }
 
@@ -65,7 +69,7 @@ public class CuaHangServlet extends HttpServlet {
         HttpServletRequest request,
         HttpServletResponse response
     ) throws IOException, ServletException {
-//        request.setAttribute("list", this.list);
+        request.setAttribute("list", this.chRepo.findAll());
         request.getRequestDispatcher("/views/cua_hang/index.jsp")
             .forward(request, response);
     }
@@ -94,14 +98,13 @@ public class CuaHangServlet extends HttpServlet {
         HttpServletRequest request,
         HttpServletResponse response
     ) throws IOException, ServletException {
-        UUID id = UUID.fromString(request.getParameter("id"));
-        String ten = request.getParameter("ten");
         String ma = request.getParameter("ma");
-        String diaChi = request.getParameter("diaChi");
-        String thanhPho = request.getParameter("thanhPho");
-        String quocGia = request.getParameter("quocGia");
-        CuaHang ch = new CuaHang(id, ma, ten, diaChi, thanhPho, quocGia);
-        this.chRepo.update(ch);
+        CuaHang oldValue = this.chRepo.findByMa(ma);
+        oldValue.setTen(request.getParameter("ten"));
+        oldValue.setDiaChi(request.getParameter("diaChi"));
+        oldValue.setThanhPho(request.getParameter("thanhPho"));
+        oldValue.setQuocGia(request.getParameter("quocGia"));
+        this.chRepo.update(oldValue);
 
         response.sendRedirect("/SU23B2_SOF3011_SD18105_war_exploded/cua-hang/index");
     }

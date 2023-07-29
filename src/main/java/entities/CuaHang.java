@@ -1,6 +1,7 @@
 package entities;
 
 import jakarta.persistence.*;
+import org.hibernate.annotations.GenericGenerator;
 
 import java.util.UUID;
 
@@ -8,6 +9,8 @@ import java.util.UUID;
 @Table(name = "CuaHang")
 public class CuaHang {
     @Id
+//    @GeneratedValue(generator = "uuid4")
+//    @GenericGenerator(name = "uuid", strategy = "uuid4")
     @GeneratedValue(strategy = GenerationType.UUID)
     @Column(name="Id")
     private UUID id;

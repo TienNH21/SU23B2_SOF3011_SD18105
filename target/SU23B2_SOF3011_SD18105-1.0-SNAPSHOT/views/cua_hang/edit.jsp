@@ -11,7 +11,7 @@
     <title>Title</title>
 </head>
 <body>
-    <form method="POST" action="/SU23B2_SOF3011_SD18105_war_exploded/cua-hang/update?id=${ data.id }">
+    <form method="POST" action="/SU23B2_SOF3011_SD18105_war_exploded/cua-hang/update?ma=${ data.ma }">
         <div>
             <label>Mã</label>
             <input type="text" name="ma" value="${ data.ma }" />
