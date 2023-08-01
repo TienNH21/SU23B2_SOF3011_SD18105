@@ -15,6 +15,7 @@
                 <th>Địa chỉ</th>
                 <th>Thành phố</th>
                 <th>Quốc gia</th>
+                <th>Số NV</th>
                 <th colspan="2">Thao tác</th>
             </tr>
         </thead>
@@ -27,6 +28,7 @@
                     <td>${ ch.diaChi }</td>
                     <td>${ ch.thanhPho }</td>
                     <td>${ ch.quocGia }</td>
+                    <td>${ ch.listNV.size() }</td>
                     <td>
                         <a href="/SU23B2_SOF3011_SD18105_war_exploded/cua-hang/edit?ma=${ ch.ma }">Cập nhật</a>
                     </td>

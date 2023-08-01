@@ -3,6 +3,7 @@ package entities;
 import jakarta.persistence.*;
 import org.hibernate.annotations.GenericGenerator;
 
+import java.util.List;
 import java.util.UUID;
 
 @Entity
@@ -29,6 +30,9 @@ public class CuaHang {
 
     @Column(name="QuocGia")
     private String quocGia;
+
+    @OneToMany(mappedBy = "cuaHang", fetch = FetchType.EAGER)
+    private List<NhanVien> listNV;
 
     public CuaHang() {
     }
@@ -88,5 +92,13 @@ public class CuaHang {
 
     public void setQuocGia(String quocGia) {
         this.quocGia = quocGia;
+    }
+
+    public List<NhanVien> getListNV() {
+        return listNV;
+    }
+
+    public void setListNV(List<NhanVien> listNV) {
+        this.listNV = listNV;
     }
 }
